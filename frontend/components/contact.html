@@ -1,0 +1,46 @@
+<!-- frontend/components/contact.html -->
+
+<!-- 🔹 Contact Section (Form + Map) -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- 📝 Contact Form -->
+      <div class="col-lg-6">
+        <form class="row g-3 shadow p-4 rounded bg-light">
+          <!-- Name Field -->
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <!-- Email Field -->
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <!-- Message -->
+          <div class="col-12">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <!-- Submit Button -->
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary px-4">Send Message</button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- 📍 Map -->
+      <div class="col-lg-6">
+        <div class="h-100 shadow rounded overflow-hidden">
+          <!-- Replace src with your school's location -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.842272951376!2d7.49508!3d9.05785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b6b5e6a84db%3A0x8f66df2e9a7e6fdf!2sSecondary%20School!5e0!3m2!1sen!2sng!4v1691760000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
