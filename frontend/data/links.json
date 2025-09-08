@@ -1,0 +1,18 @@
+{
+  "quickLinks": [
+    { "label": "Home", "url": "#" },
+    { "label": "Admissions", "url": "#" },
+    { "label": "Academics", "url": "#" },
+    { "label": "Contact", "url": "#" }
+  ],
+  "socialLinks": [
+    { "platform": "Facebook", "url": "#", "icon": "bi-facebook" },
+    { "platform": "Twitter", "url": "#", "icon": "bi-twitter-x" },
+    { "platform": "LinkedIn", "url": "#", "icon": "bi-linkedin" },
+    { "platform": "Instagram", "url": "#", "icon": "bi-instagram" }
+  ],
+  "footerText": {
+    "copyright": "© {year} Secondary School Portal. All Rights Reserved.",
+    "note": "Built with ❤️ using Bootstrap & AI-powered features"
+  }
+}

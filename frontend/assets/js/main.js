@@ -13,17 +13,25 @@ const components = [
     "about",
     "features",
     "announcements",
+    "gallery",
     "contact",
+    "callToAction",
     "footer",
+    "breadcrumb",
     "chatbot"
 ];
 
 // Load each component from /components/ folder
 components.forEach(id => {
-    fetch(`components/${id}.html`)
-        .then(res => res.text())
-        .then(data => {
-        document.getElementById(id).innerHTML = data;
+  fetch(`components/${id}.html`)
+    .then(res => res.text())
+    .then(data => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.innerHTML = data;
+      } else {
+        console.warn(`Element with id="${id}" not found in DOM`);
+      }
     })
     .catch(err => console.error(`Error loading ${id}:`, err));
 });

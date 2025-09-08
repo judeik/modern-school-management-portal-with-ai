@@ -2,156 +2,162 @@
    Global Styles
    ================================ */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-    background-color: #f9f9f9; /* light gray background */
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f9f9f9; /* light gray background */
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("https://picsum.photos/1600/600?school") no-repeat center center/cover;
-    color: #fff;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://picsum.photos/1600/600?school") no-repeat center center / cover;
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
 /* ================================
    Feature Section
    ================================ */
 .feature-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-    transition: color 0.3s ease;
+  font-size: 2.5rem;
+  color: #0d6efd;
+  transition: color 0.3s ease;
 }
 
 .feature-card {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    height: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
 .feature-card:hover {
-    transform: translateY(-6px);
-    background-color: #0d6efd;
-    color: #fff !important;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  background-color: #0d6efd;
+  color: #fff !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card:hover .feature-icon {
-    color: #fff;
+  color: #fff;
 }
 
 /* ================================
-   About / Quick Links Section
+   Quick Links / Hover Cards
    ================================ */
 .hover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Quick Links Buttons */
 .btn-outline-light {
-    color: #0d6efd;
-    border-color: #0d6efd;
-    background: transparent;
-    border-radius: 6px;
-    padding: 6px 14px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+  color: #0d6efd;
+  border-color: #0d6efd;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
-    background-color: #0d6efd;
-    color: #fff;
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 /* ================================
    Chatbot Styles
    ================================ */
 .chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0d6efd;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    color: #fff;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0d6efd;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
 }
+
 .chatbot-window {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 320px;
-    height: 420px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 1000;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
 }
+
 .chatbot-header {
-    background: #0d6efd;
-    color: #fff;
-    padding: 10px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .chatbot-messages {
-    flex: 1;
-    padding: 12px;
-    overflow-y: auto;
-    font-size: 0.9rem;
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 0.9rem;
 }
+
 .chatbot-input {
-    display: flex;
-    border-top: 1px solid #ddd;
+  display: flex;
+  border-top: 1px solid #ddd;
 }
+
 .chatbot-input input {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    font-size: 0.9rem;
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 0.9rem;
 }
+
 .chatbot-input button {
-    border: none;
-    background: #0d6efd;
-    color: #fff;
-    padding: 0 15px;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+  padding: 0 15px;
 }
 
 /* ================================
-   Welcome Message Images
+   Welcome Message Section
    ================================ */
 .popular-course-thumb {
   width: 320px;
@@ -175,26 +181,183 @@ body {
   }
 }
 
-/* Announcements */
- .announcement-img {
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    min-height: 150px;
-    border-radius: .5rem 0 0 .5rem;
-  }
-  .hover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .hover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+/* ================================
+   Announcements
+   ================================ */
+.announcement-img {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  min-height: 150px;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* ================================
+   Gallery Styles
+   ================================ */
+.gallery-img-div {
+  width: 100%;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img-div:hover {
+  transform: scale(1.05);
+}
+
+/* Background images */
+.gallery-img-div.img-1 {
+  background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+}
+
+.gallery-img-div.img-2 {
+  background-image: url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c');
+}
+
+.gallery-img-div.img-3 {
+  background-image: url('https://images.unsplash.com/photo-1555421689-491a97ff2040');
+}
+
+.gallery-img-div.img-4 {
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+}
+
+/* More photos button */
+.gallery-btn {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Call-to-Action (CTA) Section
+   ================================ */
+.cta-section {
+  padding: 3rem 0;
+  background: linear-gradient(90deg, #0056b3, #007bff);
+  color: #fff;
+}
+
+.cta-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.cta-section p {
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.cta-section .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+  background: #f8f9fa;
+  color: #0d6efd;
+}
+
+/* ================================
+   Call To Action Section
+   ================================ */
+.call-to-action-area {
+  background: #0d6efd;
+  padding: 40px 20px;
+  border-radius: 8px 8px 0 0;
+  margin-top: 40px;
+}
+
+.cta-content {
+  color: #fff;
+}
+
+.cta-heading {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.cta-heading-sm {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cta-buttons .btn {
+  margin: 5px;
+  border-radius: 6px;
+}
+
+/* ================================
+    Footer Section
+   ================================ */
+  
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-social {
+  color: #adb5bd;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.2s;
+}
+.footer-social:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+.footer {
+  background-color: #212529;
+  color: #adb5bd;
+  padding: 5px 0;
+}
+
+/* Company Credit */
+.company-credit {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0d6efd; /* Bootstrap Primary Blue */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
   }
 
-  .hover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .company-credit:hover {
+    color: #ffc107; /* Highlight color on hover */
+    text-decoration: underline;
   }
-  .hover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
-  }
+
+  /* Breadcrumb Styles */
+.breadcrumb {
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: var(--bs-primary); /* Uses Bootstrap primary color */
+  transition: color 0.2s ease-in-out;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--bs-dark);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--bs-secondary);
+  font-weight: 500;
+}
