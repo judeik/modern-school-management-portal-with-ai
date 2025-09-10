@@ -1,22 +1,96 @@
 <!-- frontend/components/navbar.html -->
-<!-- 🔹 Navbar Component -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      <img src="assets/images/logo.png" alt="School Logo" height="40">
-      School Portal
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portal-links">Portals</a></li>
-        <li class="nav-item"><a class="nav-link" href="#announcements">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+<!-- 🔹 Main Navbar -->
+<header class="sticky-top shadow-sm bg-white">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+      <!-- Logo & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="/" title="School Portal Home">
+        <img src="assets/images/logo.png" alt="School Portal Logo" class="img-fluid me-2 school-logo">
+        <span class="fw-bold text-primary">School Portal</span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#about">About Us</a></li>
+              <li><a class="dropdown-item" href="/history">Our History</a></li>
+              <li><a class="dropdown-item" href="/values">Our Values</a></li>
+            </ul>
+          </li>
+
+          <!-- Admission Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admission</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="admissionDropdown">
+              <li><a class="dropdown-item" href="/admission-procedure">Application Procedure</a></li>
+              <li><a class="dropdown-item" href="/apply">Apply Here</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="academicsDropdown">
+              <li><a class="dropdown-item" href="/classes">Classes</a></li>
+              <li><a class="dropdown-item" href="/subjects">Subjects</a></li>
+              <li><a class="dropdown-item" href="/exams">External Examinations</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+
+          <!-- ICT Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ictDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ICT</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="ictDropdown">
+              <li><a class="dropdown-item" href="#">ICT Education</a></li>
+              <li><a class="dropdown-item" href="#">E-Portals</a></li>
+              <li><a class="dropdown-item" href="#">E-Payments</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#announcements">News & Events</a></li>
+
+          <!-- Media Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="mediaDropdown">
+              <li><a class="dropdown-item" href="#">Picture Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Portal Login Button -->
+        <a href="#portal-links" class="btn btn-primary btn-sm ms-lg-3">
+          <i class="fa fa-sign-in-alt me-1"></i> Portal Login
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <!-- 🔹 Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb" class="bg-light border-top">
+    <div class="container py-2">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item"><a href="/academics" class="text-decoration-none">Academics</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Subjects</li>
+      </ol>
+    </div>
+  </nav>
+</header>

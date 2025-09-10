@@ -6,6 +6,8 @@
 
 // List of components to load dynamically
 const components = [
+    "header",
+    // "socialMedia",
     "navbar",
     "hero",
     "welcomeMessage",
