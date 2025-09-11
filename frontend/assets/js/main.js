@@ -23,6 +23,14 @@ const components = [
     "chatbot"
 ];
 
+// Helper: Load external script after component injection
+function loadScript(src) {
+  const script = document.createElement("script");
+  script.src = src;
+  script.defer = true;
+  document.body.appendChild(script);
+}
+
 // Load each component from /components/ folder
 components.forEach(id => {
   fetch(`components/${id}.html`)
@@ -31,6 +39,11 @@ components.forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.innerHTML = data;
+
+        // ✅ If chatbot is loaded, then load its logic
+        if (id === "chatbot") {
+          loadScript("assets/js/chatbot.js");
+        }
       } else {
         console.warn(`Element with id="${id}" not found in DOM`);
       }

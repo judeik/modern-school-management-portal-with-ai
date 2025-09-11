@@ -1,45 +1,26 @@
 <!-- frontend/components/chatbot.html -->
 <!-- 🔹 AI Chatbot Widget -->
-<button 
-  id="chatbotToggle" 
-  class="chatbot-button" 
-  aria-label="Open chatbot" 
-  title="Open chatbot"
->
-  <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
-</button>
+<!-- Floating Button -->
+  <button id="chatbotToggle" class="chatbot-button" aria-label="Open chatbot">
+    <i class="bi bi-chat-dots-fill"></i>
+  </button>
 
-<div id="chatbotWindow" class="chatbot-window shadow-lg" role="dialog" aria-label="AI Assistant">
-  <!-- Header -->
-  <div class="chatbot-header d-flex justify-content-between align-items-center">
-    <span><i class="bi bi-robot" aria-hidden="true"></i> AI Assistant</span>
-    <button 
-      id="chatbotClose" 
-      class="btn-close btn-close-white" 
-      aria-label="Close chatbot" 
-      title="Close chatbot"
-    ></button>
+  <!-- Chat Window -->
+  <div id="chatbotWindow" class="chatbot-window shadow-lg" role="dialog" aria-label="AI Assistant">
+    <!-- Header -->
+    <div class="chatbot-header d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-robot"></i> AI Assistant</span>
+      <button id="chatbotClose" class="btn-close btn-close-white"></button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chatbotMessages" class="chatbot-messages"></div>
+
+    <!-- Input -->
+    <div class="chatbot-input">
+      <input id="chatbotInput" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+      <button id="chatbotSend" class="btn btn-primary">
+        <i class="bi bi-send-fill"></i>
+      </button>
+    </div>
   </div>
-
-  <!-- Messages -->
-  <div id="chatbotMessages" class="chatbot-messages" aria-live="polite"></div>
-
-  <!-- Input -->
-  <div class="chatbot-input d-flex">
-    <input 
-      id="chatbotInput" 
-      type="text" 
-      class="form-control border-0" 
-      placeholder="Ask me anything..." 
-      aria-label="Chat input"
-    >
-    <button 
-      id="chatbotSend" 
-      class="btn btn-primary" 
-      aria-label="Send message" 
-      title="Send message"
-    >
-      <i class="bi bi-send-fill" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
