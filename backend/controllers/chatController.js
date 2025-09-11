@@ -1,50 +1,59 @@
+// @ts-nocheck
 // ==========================================
 // backend/controllers/chatController.js
-// Handles chatbot logic
+// Handles chatbot logic with MongoDB sessions
 // ==========================================
+import dotenv from "dotenv";
+dotenv.config();
+
 import OpenAI from "openai";
-
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-// Simple in-memory store for sessions
-const sessions = new Map();
+import crypto from "crypto";
+import Session from "../models/Session.js";
 
 export const handleChat = async (req, res) => {
   try {
-    const { message, sessionId } = req.body;
+    let { message, sessionId } = req.body;
 
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
     }
 
-    // Retrieve conversation history for session
-    let history = sessions.get(sessionId) || [];
+    if (!sessionId) {
+      sessionId = crypto.randomUUID();
+    }
 
-    // Push new user message
-    history.push({ role: "user", content: message });
+    let session = await Session.findOne({ sessionId });
+    if (!session) {
+      session = new Session({ sessionId, history: [] });
+    }
 
-    // Ask OpenAI
+    session.history.push({ role: "user", content: message });
+
+    if (session.history.length > 30) {
+      session.history = session.history.slice(-30);
+    }
+
+    // ✅ Create OpenAI client here, after dotenv is guaranteed loaded
+    const client = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+
     const completion = await client.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
         { role: "system", content: "You are a helpful school assistant chatbot." },
-        ...history,
+        ...session.history,
       ],
     });
 
     const reply = completion.choices[0].message.content;
 
-    // Save assistant reply in history
-    history.push({ role: "assistant", content: reply });
+    session.history.push({ role: "assistant", content: reply });
+    await session.save();
 
-    // Store updated history
-    sessions.set(sessionId, history);
-
-    res.json({ reply });
+    res.json({ reply, sessionId });
   } catch (err) {
-    console.error("Chat error:", err.message);
+    console.error("❌ Chat error:", err.response?.data || err.message);
     res.status(500).json({ error: "Failed to process message" });
   }
 };

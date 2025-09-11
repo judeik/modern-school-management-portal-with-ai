@@ -1,3 +1,4 @@
+// @ts-nocheck
 // ================================
 // main.js - Component Loader Script
 // Loads HTML components into index.html
