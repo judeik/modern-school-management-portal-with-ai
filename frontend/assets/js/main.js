@@ -1,6 +1,5 @@
-// frontend/assets/js/main.js
 // ================================
-// Component Loader Script
+// main.js - Component Loader Script
 // Loads HTML components into index.html
 // ================================
 
@@ -20,7 +19,7 @@ const components = [
     "callToAction",
     "footer",
     "breadcrumb",
-    "chatbot"
+    "chatbot" // Chatbot component
 ];
 
 // Helper: Load external script after component injection
@@ -40,9 +39,14 @@ components.forEach(id => {
       if (el) {
         el.innerHTML = data;
 
-        // ✅ If chatbot is loaded, then load its logic
+        // ✅ If chatbot is loaded, load its logic and initialize
         if (id === "chatbot") {
           loadScript("assets/js/chatbot.js");
+
+          // Small delay to ensure script loads, then call initChatbot
+          setTimeout(() => {
+            window.initChatbot?.();
+          }, 50);
         }
       } else {
         console.warn(`Element with id="${id}" not found in DOM`);

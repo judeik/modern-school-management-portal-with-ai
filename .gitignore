@@ -1,0 +1,55 @@
+# ====================================
+# Node.js Backend
+# ====================================
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/package-lock.json
+backend/yarn.lock
+backend/.env
+backend/.env.local
+backend/.env.development
+backend/.env.test
+backend/.env.production
+backend/dist/
+backend/build/
+backend/*.tsbuildinfo
+
+# ====================================
+# Frontend
+# ====================================
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.test
+frontend/.env.production
+frontend/dist/
+frontend/build/
+frontend/*.tmp
+frontend/.DS_Store
+
+# ====================================
+# Logs
+# ====================================
+logs/
+*.log
+logs/*.log
+
+# ====================================
+# OS & IDE
+# ====================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.bak
+*.swp
